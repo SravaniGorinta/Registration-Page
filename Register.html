@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<HTML>
+<head>
+	<title>Registration Page</title>
+	<style>
+	fieldset
+	{
+	height:400px;
+	width:280px;
+	background-color:white;
+	border:1.6px ;
+	border-radius:15px;
+	}
+	//legend
+	//{
+	//background-color:black;
+	//color:black;
+	//}
+	center
+	{
+	background-image:url('https://static.vecteezy.com/system/resources/previews/000/217/364/original/vector-colourful-landscape-illustration.jpg');
+	height:620px;	
+	background-size: cover; 
+	background-position: center;
+	background-repeat: no-repeat;
+	}
+	</style>
+	<script>
+	
+	function validate()
+	{
+		var x=f1.name.value;
+		if(x.length<5)
+		{
+		alert("Please enter your full name");
+		return false;
+		}
+		var p=f1.phno.value;
+		if(p.length<10)
+		{
+		alert("Please enter a valid number");
+		return false;
+		}
+		var psw=f1.pwd.value;
+		if(p.length<6)
+		{
+		alert("Enter password of length atleast 8 characters");
+		return false;
+		}
+		alert("Form Submitted successfully");
+		
+	}
+	</script>
+
+</head>
+<body>
+	<center><br><br><br><br> 
+<font face="Brush Script" size=4>
+	   <form name='f1' >
+		<fieldset>
+		<p><b><i><u>Registration Page</u></i></b></p>
+		<label for="name" >Full Name</label>
+		<input type="text" id="name" required=true><br><br>
+		
+		<label for="mail">Email</label>
+		<input type="email" id="mail" placeholder="Enter your email" align="right"><br><br>
+		<label for="dob">Date Of Birth</label>
+		<input type="date" id="dob"><br><br>
+		<label for="gender">Gender  </label>
+		<input type="radio">Female
+		<input type="radio">Male <br><br>
+		<label for="pwd">Password</label>
+		<input type="password" id="pwd"><br><br>
+		<label for="phno">Phone no</label>
+		<input type="tel" id="phno"><br><br>
+		<input type="checkbox" id="terms">I agree to the terms and Conditions<br><br>
+		<input type="Submit" onclick="validate()">
+		<input type="Reset">
+		</fieldset>
+	   </form>
+</font>	
+	</center>
+</body>
+</HTML>
